@@ -1,2 +1,2 @@
 [workspace]
-members = [ "abc331", "abc333", "abc334", "abc337", "abc338", "abc379", "abc380","abc381", "atcoder_biginners_selection"]
+members = [ "abc331", "abc333", "abc334", "abc337", "abc338", "abc378", "abc379", "abc380","abc381", "atcoder_biginners_selection"]
