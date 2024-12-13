@@ -2,8 +2,12 @@ use proconio::input;
 
 fn main() {
     input! {
-        n: usize,
-        s: String,
+        x: i64,
     }
-    todo!();
+
+    if x < 0 {
+        println!("{}", x / 10);
+    } else {
+        println!("{}", (x + 9) / 10);
+    }
 }
