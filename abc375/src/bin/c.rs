@@ -4,8 +4,8 @@ use proconio::{input, marker::Chars};
 
 fn main() {
     input! {
-        n: i32,
-        a: [Chars; n as usize],
+        n: usize,
+        a: [Chars; n],
     }
 
     let mut b = a.clone();
@@ -14,17 +14,17 @@ fn main() {
         for j in 0..n {
             let mut ni = i;
             let mut nj = j;
-            let k = min(min(ni + 1, nj + 1), min(n - ni, n - nj));
+            let k = min(min(ni + 1, nj + 1), min(n - ni, n - nj)) % 4;
 
             for _ in 0..k {
                 swap(&mut ni, &mut nj);
                 nj = n - 1 - nj;
             }
-            b[ni as usize][nj as usize] = a[i as usize][j as usize];
+            b[ni][nj] = a[i][j];
         }
     }
 
     for i in 0..n {
-        println!("{}", b[i as usize].iter().collect::<String>());
+        println!("{}", b[i].iter().collect::<String>());
     }
 }
