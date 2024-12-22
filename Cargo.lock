@@ -381,6 +381,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "abc385"
+version = "0.1.0"
+dependencies = [
+ "proconio",
+]
+
+[[package]]
 name = "atcoder_biginners_selection"
 version = "0.1.0"
 dependencies = [
