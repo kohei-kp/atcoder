@@ -1,0 +1,9 @@
+[package]
+name = "abc399"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+petgraph = "0.7.1"
+proconio = "0.5.0"
+superslice = "1.0.0"
