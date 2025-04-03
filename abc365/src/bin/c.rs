@@ -9,7 +9,7 @@ fn main() {
 
     let inf = 1001001001;
     if f(inf, &a, m) {
-        println!("infiniite");
+        println!("infinite");
     } else {
         let mut ac = 0;
         let mut wa = inf;
