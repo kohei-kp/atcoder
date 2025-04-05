@@ -5,7 +5,7 @@ default_to_workspace = false
 description = "Create a new AtCoder project"
 script = [
     "cargo new ${@}",
-    "cargo add proconio superslice petgrapth -p ${@}",
+    "cargo add proconio superslice petgrapth itertools -p ${@}",
     "rm -f ${@}/src/main.rs",
     "mkdir -p ${@}/src/bin",
     "for i in {a..g}; do cp template.rs \"${@}/src/bin/$i.rs\"; done"
