@@ -516,6 +516,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "abc400"
+version = "0.1.0"
+dependencies = [
+ "itertools",
+ "petgraph",
+ "proconio",
+ "superslice",
+]
+
+[[package]]
 name = "atcoder_biginners_selection"
 version = "0.1.0"
 dependencies = [
