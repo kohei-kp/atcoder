@@ -3,45 +3,48 @@ use proconio::input;
 fn main() {
     input! {
         n: usize,
-        q: i64
+        q: usize,
     }
 
-    let mut hole = vec![];
-    for i in 0..n {
-        hole.push(i);
+    // initialize
+    let mut house = std::collections::BTreeMap::new();
+    let mut p2h = std::collections::BTreeMap::new();
+    for i in 1..=n as i32 {
+        house.insert(i, 1);
+        p2h.insert(i, i);
     }
-    let mut cnt = vec![1; n];
+
     let mut ans = 0;
-
     for _ in 0..q {
         input! {
-            query_type: usize,
+            q_type: usize,
         }
 
-        match query_type {
+        match q_type {
             1 => {
                 input! {
-                    mut p: usize,
-                    mut h: usize,
+                    p: i32,
+                    h: i32,
                 }
-                p -= 1;
-                h -= 1;
 
-                if cnt[hole[p]] >= 2 {
+                // 元々ハトがいた巣
+                let old_h = p2h.get(&p).unwrap();
+                // もとの巣からマイナス
+                let old_count = house.get_mut(old_h).unwrap();
+                if *old_count == 2 {
                     ans -= 1;
                 }
-                cnt[hole[p]] -= 1;
-                if cnt[hole[p]] >= 2 {
+                *old_count -= 1;
+
+                // ハト -> 巣
+                *p2h.get_mut(&p).unwrap() = h;
+
+                // 巣 -> ハトの数
+                let count = house.get_mut(&h).unwrap();
+                if *count == 1 {
                     ans += 1;
                 }
-                hole[p] = h;
-                if cnt[hole[p]] >= 2 {
-                    ans -= 1;
-                }
-                cnt[hole[p]] += 1;
-                if cnt[hole[p]] >= 2 {
-                    ans += 1;
-                }
+                *count += 1;
             }
             2 => {
                 println!("{}", ans);
