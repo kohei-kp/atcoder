@@ -4,39 +4,33 @@ fn main() {
     input! {
         h: usize,
         w: usize,
+        s: [Chars; h],
     }
 
-    let mut board = vec![];
-    for _ in 0..h {
-        input! {
-            row: Chars
-        }
-        board.push(row);
-    }
-
-    let mut li = h;
-    let mut ri = 0;
-    let mut lj = w;
-    let mut rj = 0;
+    let mut max_h = 0;
+    let mut min_h = h - 1;
+    let mut max_w = 0;
+    let mut min_w = w - 1;
 
     for i in 0..h {
         for j in 0..w {
-            if board[i][j] == '#' {
-                li = std::cmp::min(li, i);
-                ri = std::cmp::max(ri, i);
-                lj = std::cmp::min(lj, j);
-                rj = std::cmp::max(rj, j);
+            if s[i][j] == '#' {
+                max_h = max_h.max(i);
+                min_h = min_h.min(i);
+                max_w = max_w.max(j);
+                min_w = min_w.min(j);
             }
         }
     }
 
-    for i in li..=ri {
-        for j in lj..=rj {
-            if board[i][j] == '.' {
+    for i in min_h..=max_h {
+        for j in min_w..=max_w {
+            if s[i][j] == '.' {
                 println!("No");
                 return;
             }
         }
     }
+
     println!("Yes");
 }
