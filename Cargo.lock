@@ -527,7 +527,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "adt_202050408_3"
+name = "adt_20250408_3"
 version = "0.1.0"
 dependencies = [
  "itertools",
