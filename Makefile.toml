@@ -10,3 +10,23 @@ script = [
     "mkdir -p ${@}/src/bin",
     "for i in {a..g}; do cp template.rs \"${@}/src/bin/$i.rs\"; done"
 ]
+
+[tasks.create_adt_e]
+description = "Create a new AtCoder Daily Training project(EASY)"
+script = [
+    "cargo new ${@}",
+    "cargo add proconio superslice petgraph itertools -p ${@}",
+    "rm -f ${@}/src/main.rs",
+    "mkdir -p ${@}/src/bin",
+    "for i in {a..e}; do cp template.rs \"${@}/src/bin/$i.rs\"; done"
+]
+
+[tasks.create_adt_m]
+description = "Create a new AtCoder Daily Training project(MEDIUM)"
+script = [
+    "cargo new ${@}",
+    "cargo add proconio superslice petgraph itertools -p ${@}",
+    "rm -f ${@}/src/main.rs",
+    "mkdir -p ${@}/src/bin",
+    "for i in {c..g}; do cp template.rs \"${@}/src/bin/$i.rs\"; done"
+]
