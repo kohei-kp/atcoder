@@ -547,6 +547,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "adt_20250417_2"
+version = "0.1.0"
+dependencies = [
+ "itertools",
+ "petgraph 0.8.1",
+ "proconio",
+ "superslice",
+]
+
+[[package]]
 name = "allocator-api2"
 version = "0.2.21"
 source = "registry+https://github.com/rust-lang/crates.io-index"
