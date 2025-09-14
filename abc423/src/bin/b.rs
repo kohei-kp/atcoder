@@ -6,6 +6,7 @@ fn main() {
         l: [usize; n],
     }
 
+    // 0番目から連続する0の個数
     let mut ans1 = 0;
     for i in 0..n {
         if l[i] == 0 {
@@ -15,6 +16,7 @@ fn main() {
         }
     }
 
+    // n-1番目から連続する0の個数
     let mut ans2 = n;
     for i in (0..n).rev() {
         if l[i] == 0 {
@@ -26,8 +28,10 @@ fn main() {
 
     let cnt1 = ans1 + 1;
     let cnt2 = n - ans2 + 1;
+    // 重複している部分
     let ov = if ans1 >= ans2 { ans1 - ans2 + 1 } else { 0 };
 
+    // 全体から重複部分を引く
     let r = cnt1 + cnt2 - ov;
     let ans = (n + 1) - r;
 
