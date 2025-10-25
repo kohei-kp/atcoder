@@ -531,7 +531,7 @@ name = "abc401"
 version = "0.1.0"
 dependencies = [
  "itertools",
- "petgraph 0.8.2",
+ "petgraph 0.8.3",
  "proconio",
  "superslice",
 ]
@@ -541,7 +541,7 @@ name = "abc402"
 version = "0.1.0"
 dependencies = [
  "itertools",
- "petgraph 0.8.2",
+ "petgraph 0.8.3",
  "proconio",
  "superslice",
 ]
@@ -551,7 +551,7 @@ name = "abc403"
 version = "0.1.0"
 dependencies = [
  "itertools",
- "petgraph 0.8.2",
+ "petgraph 0.8.3",
  "proconio",
  "superslice",
 ]
@@ -561,7 +561,7 @@ name = "abc404"
 version = "0.1.0"
 dependencies = [
  "itertools",
- "petgraph 0.8.2",
+ "petgraph 0.8.3",
  "proconio",
  "superslice",
 ]
@@ -571,7 +571,7 @@ name = "abc405"
 version = "0.1.0"
 dependencies = [
  "itertools",
- "petgraph 0.8.2",
+ "petgraph 0.8.3",
  "proconio",
  "superslice",
 ]
@@ -581,7 +581,7 @@ name = "abc406"
 version = "0.1.0"
 dependencies = [
  "itertools",
- "petgraph 0.8.2",
+ "petgraph 0.8.3",
  "proconio",
  "superslice",
 ]
@@ -591,7 +591,7 @@ name = "abc407"
 version = "0.1.0"
 dependencies = [
  "itertools",
- "petgraph 0.8.2",
+ "petgraph 0.8.3",
  "proconio",
  "superslice",
 ]
@@ -601,7 +601,7 @@ name = "abc408"
 version = "0.1.0"
 dependencies = [
  "itertools",
- "petgraph 0.8.2",
+ "petgraph 0.8.3",
  "proconio",
  "superslice",
 ]
@@ -611,7 +611,7 @@ name = "abc409"
 version = "0.1.0"
 dependencies = [
  "itertools",
- "petgraph 0.8.2",
+ "petgraph 0.8.3",
  "proconio",
  "superslice",
 ]
@@ -621,7 +621,7 @@ name = "abc411"
 version = "0.1.0"
 dependencies = [
  "itertools",
- "petgraph 0.8.2",
+ "petgraph 0.8.3",
  "proconio",
  "superslice",
 ]
@@ -631,7 +631,7 @@ name = "abc412"
 version = "0.1.0"
 dependencies = [
  "itertools",
- "petgraph 0.8.2",
+ "petgraph 0.8.3",
  "proconio",
  "superslice",
 ]
@@ -641,7 +641,7 @@ name = "abc414"
 version = "0.1.0"
 dependencies = [
  "itertools",
- "petgraph 0.8.2",
+ "petgraph 0.8.3",
  "proconio",
  "superslice",
 ]
@@ -651,7 +651,7 @@ name = "abc417"
 version = "0.1.0"
 dependencies = [
  "itertools",
- "petgraph 0.8.2",
+ "petgraph 0.8.3",
  "proconio",
  "superslice",
 ]
@@ -661,7 +661,7 @@ name = "abc421"
 version = "0.1.0"
 dependencies = [
  "itertools",
- "petgraph 0.8.2",
+ "petgraph 0.8.3",
  "proconio",
  "superslice",
 ]
@@ -671,7 +671,17 @@ name = "abc423"
 version = "0.1.0"
 dependencies = [
  "itertools",
- "petgraph 0.8.2",
+ "petgraph 0.8.3",
+ "proconio",
+ "superslice",
+]
+
+[[package]]
+name = "abc429"
+version = "0.1.0"
+dependencies = [
+ "itertools",
+ "petgraph 0.8.3",
  "proconio",
  "superslice",
 ]
@@ -681,7 +691,7 @@ name = "adt_20250408_3"
 version = "0.1.0"
 dependencies = [
  "itertools",
- "petgraph 0.8.2",
+ "petgraph 0.8.3",
  "proconio",
  "superslice",
 ]
@@ -691,16 +701,10 @@ name = "adt_20250417_2"
 version = "0.1.0"
 dependencies = [
  "itertools",
- "petgraph 0.8.2",
+ "petgraph 0.8.3",
  "proconio",
  "superslice",
 ]
-
-[[package]]
-name = "allocator-api2"
-version = "0.2.21"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "683d7910e743518b0e34f1186f92494becacb047c7b6bf616c96772180fef923"
 
 [[package]]
 name = "atcoder_biginners_selection"
@@ -739,8 +743,6 @@ version = "0.15.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bf151400ff0baff5465007dd2f3e717f3fe502074ca563069ce3a6629d07b289"
 dependencies = [
- "allocator-api2",
- "equivalent",
  "foldhash",
 ]
 
@@ -775,9 +777,9 @@ dependencies = [
 
 [[package]]
 name = "petgraph"
-version = "0.8.2"
+version = "0.8.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "54acf3a685220b533e437e264e4d932cfbdc4cc7ec0cd232ed73c08d03b8a7ca"
+checksum = "8701b58ea97060d5e5b155d383a69952a60943f0e6dfe30b04c287beb0b27455"
 dependencies = [
  "fixedbitset",
  "hashbrown",
