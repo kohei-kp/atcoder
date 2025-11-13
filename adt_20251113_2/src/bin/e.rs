@@ -4,16 +4,17 @@ use std::collections::VecDeque;
 fn main() {
     input! {
         n: usize,
-        d: i64
+        d: i64,
+        ps: [(i64, i64); n],
     }
 
-    let mut ps: Vec<(i64, i64)> = vec![];
-    for _ in 0..n {
-        input! {
-            p: (i64, i64)
-        }
-        ps.push(p);
-    }
+    let near = |a: usize, b: usize| -> bool {
+        let (ax, ay) = ps[a];
+        let (bx, by) = ps[b];
+        let dx = ax - bx;
+        let dy = ay - by;
+        dx * dx + dy * dy <= d * d
+    };
 
     // BFS
     let mut queue = VecDeque::new();
@@ -21,11 +22,9 @@ fn main() {
     ans[0] = true;
     queue.push_back(0);
 
-    while !queue.is_empty() {
-        let v = queue.pop_front().unwrap();
-
+    while let Some(v) = queue.pop_front() {
         for u in 0..n {
-            if near(v, u, &ps, d) {
+            if near(v, u) {
                 if ans[u] {
                     continue;
                 }
@@ -35,17 +34,7 @@ fn main() {
         }
     }
 
-    for i in 0..ans.len() {
-        if ans[i] {
-            println!("Yes");
-        } else {
-            println!("No");
-        }
+    for ok in ans {
+        println!("{}", if ok { "Yes" } else { "No" })
     }
-}
-
-fn near(a: usize, b: usize, ps: &Vec<(i64, i64)>, d: i64) -> bool {
-    let dx = ps[a].0 - ps[b].0;
-    let dy = ps[a].1 - ps[b].1;
-    dx * dx + dy * dy <= d * d
 }
