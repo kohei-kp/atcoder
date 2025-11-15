@@ -737,6 +737,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "abc432"
+version = "0.1.0"
+dependencies = [
+ "itertools",
+ "petgraph 0.8.3",
+ "proconio",
+ "superslice",
+]
+
+[[package]]
 name = "adt_20250408_3"
 version = "0.1.0"
 dependencies = [
