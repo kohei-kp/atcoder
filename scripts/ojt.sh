@@ -6,15 +6,18 @@ if [ $# -ne 2 ]; then
     exit 1
 fi
 
+DIR=$(cd $(dirname "$0") && pwd)
+
 NUM=$1
 LETTER=$2
 CONTEST="abc${NUM}"
 BIN="${CONTEST}/src/bin/${LETTER}.rs"
 TESTDIR="${CONTEST}/test/${LETTER}"
 
-if [ ! -d "$TESTDIR" ]; then
+# サンプルが存在しない場合、自動でダウンロード
+if [ ! -d "$TESTDIR" ] || [ -z "$(ls -A "$TESTDIR")" ]; then
     echo "[INFO] Samples not found, downloading..."
-    ./ojd.sh "$NUM" "$LETTER"
+    "$DIR/ojd.sh" "$NUM" "$LETTER"
 fi
 
 echo "[INFO] Testing $BIN"
