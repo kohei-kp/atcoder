@@ -53,6 +53,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "abc323"
+version = "0.1.0"
+dependencies = [
+ "itertools",
+ "petgraph 0.8.3",
+ "proconio",
+ "superslice",
+]
+
+[[package]]
 name = "abc329"
 version = "0.1.0"
 dependencies = [
