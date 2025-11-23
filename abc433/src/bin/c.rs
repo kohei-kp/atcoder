@@ -13,13 +13,13 @@ fn main() {
         if c == prev {
             count += 1;
         } else if c != prev {
-            let num: i64 = ([prev].iter().collect::<String>()).parse().unwrap();
+            let num: i64 = prev.to_string().parse().unwrap();
             ran.push((num, count));
             count = 1;
         }
         prev = c;
     }
-    let num: i64 = ([prev].iter().collect::<String>()).parse().unwrap();
+    let num: i64 = prev.to_string().parse().unwrap();
     ran.push((num, count));
 
     if ran.len() == 1 {
