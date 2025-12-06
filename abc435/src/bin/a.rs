@@ -3,7 +3,12 @@ use proconio::input;
 fn main() {
     input! {
         n: usize,
-        s: String,
     }
-    todo!();
+
+    let mut ans = 0;
+    for i in 1..=n {
+        ans += i;
+    }
+
+    println!("{}", ans);
 }
